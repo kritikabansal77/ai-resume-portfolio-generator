@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background:#f2f2f2;
+            font-family:Arial, Helvetica, sans-serif;
+            color:#000;
+        }
+
+        .container{
+            background:#fff;
+            max-width:900px;
+            margin:40px auto;
+            padding:40px;
+            box-shadow:0 0 12px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            margin-bottom:5px;
+            font-size:28px;
+        }
+
+        .role{
+            font-size:16px;
+            margin-bottom:10px;
+        }
+
+        .contact{
+            font-size:14px;
+            margin-bottom:25px;
+        }
+
+        h3{
+            border-bottom:1px solid #000;
+            padding-bottom:4px;
+            margin-top:30px;
+            text-transform:uppercase;
+            font-size:17px;
+        }
+
+        p{
+            font-size:14px;
+            line-height:1.6;
+        }
+
+        .skills span{
+            display:inline-block;
+            border:1px solid #000;
+            padding:6px 14px;
+            border-radius:20px;
+            margin:6px 6px 0 0;
+            font-size:13px;
+        }
+
+        .project{
+            margin-top:15px;
+        }
+
+        .project-title{
+            font-weight:bold;
+            margin-bottom:5px;
+        }
+
+        .buttons{
+            margin-top:40px;
+            text-align:center;
+        }
+
+        .buttons a{
+            background:#1f7a4a;
+            color:white;
+            padding:12px 22px;
+            border-radius:8px;
+            margin:0 8px;
+            text-decoration:none;
+            font-size:14px;
+            text-decoration:none;
+        }
+
+        .buttons a:hover{
+            background:#16613a;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <h1>{{ data.name }}</h1>
+    <div class="role">{{ data.role }}</div>
+    <div class="contact">
+        {{ data.email }} |
+        <a href="{{ data.github }}" target="_blank">{{ data.github }}</a>
+    </div>
+
+    <!-- ABOUT -->
+    <h3>About Me</h3>
+    <p>{{ data.objective }}</p>
+
+
+    <!-- SKILLS -->
+    <h3>Skills</h3>
+    <div class="skills">
+        {% for skill in data.skills %}
+            <span>{{ skill }}</span>
+        {% endfor %}
+    </div>
+
+    <!-- PROJECTS -->
+    <h3>Projects</h3>
+    <p>{{ data.projects }}</p>
+
+
+    <!-- EDUCATION -->
+    <h3>Education</h3>
+    <p>{{ data.education }}</p>
+
+    <!-- BUTTON -->
+    <div class="buttons">
+        <a href="/">Back to Home</a>
+    </div>
+
+</div>
+
+</body>
+</html>

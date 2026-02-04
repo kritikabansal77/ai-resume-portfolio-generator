@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Generator</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:650px;
+            margin:40px auto;
+            background:#ffffff;
+            padding:30px;
+            box-shadow:0 0 12px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:25px;
+        }
+
+        .form-row{
+            display:flex;
+            align-items:center;
+            margin-bottom:15px;
+        }
+
+        .form-row label{
+            width:180px;
+            font-weight:600;
+        }
+
+        .form-row input,
+        .form-row textarea{
+            flex:1;
+            padding:8px;
+            border:1px solid #ccc;
+            border-radius:4px;
+        }
+
+        textarea{
+            resize:none;
+            height:70px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:20px;
+            background:#1f7a4a;
+            color:#fff;
+            border:none;
+            font-size:16px;
+            border-radius:6px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#16613a;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>AI Resume Generator</h2>
+
+    <form action="/generate" method="post">
+
+        <div class="form-row">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="form-row">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Your email address" required>
+        </div>
+
+        <div class="form-row">
+            <label>Career Objective</label>
+            <textarea name="objective" placeholder="I am a quick learner..."></textarea>
+        </div>
+
+        <div class="form-row">
+            <label>Skills</label>
+            <input type="text" name="skills" placeholder="Add your skills">
+        </div>
+
+        <div class="form-row">
+            <label>Education</label>
+            <input type="text" name="education" placeholder="Your education">
+        </div>
+
+        <div class="form-row">
+            <label>Target Job Role</label>
+            <input type="text" name="role" placeholder="Fresher / Software Intern">
+        </div>
+
+       <div class="form-row">
+    <label>projects</label>
+    <input
+        type="text"
+        id="projects"
+        name="projects"
+        placeholder="Add your projects"
+    >
+</div>
+
+        <div class="form-row">
+            <label>GitHub Link</label>
+            <input type="text" name="github" placeholder="https://github.com/username">
+        </div>
+
+        <button type="submit">Generate Resume</button>
+
+    </form>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+

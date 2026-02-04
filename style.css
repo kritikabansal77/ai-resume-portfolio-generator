@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.container, .resume, .portfolio {
+    background: white;
+    width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.email {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+.skills span {
+    border: 1px solid black;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.btn-group {
+    margin-top: 30px;
+}
+
+.btn {
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.btn.green {
+    background: #1f7a4d;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+.project {
+    margin-top: 15px;
+}
